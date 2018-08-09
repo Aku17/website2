@@ -30,7 +30,6 @@ gulp.task('copyHtml', function(){
 	.pipe(gulp.dest('dist'));
 })
 
-
 gulp.task('copyincludeHtml', function(){
 	gulp.src('src/include/*.html')
 	.pipe(htmlmin({collapseWhitespace: true}))
@@ -72,12 +71,17 @@ gulp.task('vendorjs', function(){
 		.pipe(gulp.dest('dist/js'))
 });
 
+gulp.task('copyxml', function(){
+	gulp.src('src/*.xml')
+	.pipe(gulp.dest('dist'));
+})
+
 // gulp.task('copyfonts', function() {
 //    gulp.src('src/fonts/**/*.{ttf,woff,eof,svg}')
 //    .pipe(gulp.dest('dist/fonts'));
 // });
 
-gulp.task('default', ['copyHtml', 'sass', 'scripts', 'vendorjs', 'vendorcss', 'copyincludeHtml', 'images']);
+gulp.task('default', ['copyHtml', 'sass', 'scripts', 'vendorjs', 'vendorcss', 'copyincludeHtml', 'images', 'copyxml']);
 
 gulp.task('watch', function(){
 	gulp.watch('src/js/*.js', ['scripts']);
