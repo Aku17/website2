@@ -27,9 +27,20 @@ $(document).ready(function(){
 
    // Includin header & footer
 
-   $('#header-new').load("include/header.html");
+   //$('#header-new').load("include/header.html");    
 
-   $('#new-footer').load("include/footer.html");	
+   $('#header-new').load("include/header.html", function() {
+        
+      path_class();
+
+    });
+
+   $('#new-footer').load("include/footer.html", function(){
+
+      form_validation();
+
+   });
+
 
    // menu toggle
 
@@ -158,27 +169,6 @@ $(document).ready(function(){
     });
 
 
-
-    // active menu active class
-
-    setTimeout(function(){
-
-      // $(".main-nav").addClass("active");
-      
-      var path = window.location.pathname.split("/").pop();
-  
-      // Account for home page with empty path
-      if ( path == '' ) {
-        path = 'index.php';
-      }
-          
-      var target = $('nav a[href="'+path+'"]');
-      // Add active class to target link
-      target.addClass('active-menu');
-
-      }, 1000 );
-
-
     // pricing accordian mobile
 
     $('.detail-view').click(function(){
@@ -190,52 +180,42 @@ $(document).ready(function(){
     });
 
 
-    // contact form valiadtion
-
-    setTimeout(function(){
-
-    $(".submit-btn").on("click", function(){
-      
-      $('input').each(function(){
-          if($(this).attr('isrequired') == 'yes'){
-          var inputName = $(this).attr('class');
-          var inputVal = $(this).val();
-          var errorMsg = $(this).attr('data-msg');
-          if(inputVal == '' && !$('.error').hasClass(inputName+'error')){
-          $('<div class="error '+inputName+'error">'+errorMsg+'</div>').insertAfter(this);
-          }else{
-          $('.'+inputName+'error').remove();
-          }
-          }
-      })
-
-    });
-
-
-    $('input').blur(function(){
-        var inputName = $(this).attr('class');
-        var inputVal = $(this).val();
-        var errorMsg = $(this).attr('data-msg');
-        if(inputVal == ''){
-        $('<div class="error '+inputName+'error">'+errorMsg+'</div>').insertAfter(this);
-        }else{
-        $('.'+inputName+'error').remove();
-        }
-      });
-
-    }, 1000 );
-
-
-
-      
-
-      
-
- 
-    
-
 }); // document ready function
 
 
+// functions
 
+function path_class() {
+
+var path = window.location.pathname.split("/").pop();
+  
+      // Account for home page with empty path
+      if ( path == '' ) {
+        path = 'index.php';
+      }
+          
+      var target = $('nav a[href="'+path+'"]');
+      // Add active class to target link
+      target.addClass('active-menu');
+}
+
+function form_validation() {
+
+  $(".submit-btn").on("click", function(){
+
+        $('input').each(function(){
+            if($(this).attr('isrequired') == 'yes'){
+            var inputName = $(this).attr('class');
+            var inputVal = $(this).val();
+            var errorMsg = $(this).attr('data-msg');
+            if(inputVal == '' && !$('.error').hasClass(inputName+'error')){
+            $('<div class="error '+inputName+'error">'+errorMsg+'</div>').insertAfter(this);
+            }else{
+            $('.'+inputName+'error').remove();
+            }
+            }
+        })
+
+  });
+}
 
