@@ -8,9 +8,11 @@ body {
 /* == Variables == */
 
 $light-violet: #2a62ff;
-
 $dark-violet: #132f7b;
-
+$red-theme: #E31E24;
+$black-theme: #000000;
+$white-theme: #FFFFFF;
+$gray:#fafafa;
 /* -- variables en -- */
 
 /* == Mixins st == */
@@ -193,7 +195,7 @@ section {
 }
 
 .star-text {
-    color: $light-violet;
+    color: $red-theme;
 }
 
 
@@ -273,10 +275,16 @@ nav {
             }
 
             &.active-menu {
-
-                color: $light-violet;
+                color: $red-theme;
+                // color: $light-violet;
             }
         }
+        a:hover {
+            // border-bottom: $red-theme 2px solid;
+            // text-decoration: underline $red-theme 2px;
+            // color: #c91212;
+            color:$red-theme;
+          }
     }
 }
 
@@ -471,7 +479,7 @@ section.description {
 
     text-align: center;
     padding: 0 15px;
-
+    background: $gray;
     .module-group {
         border-top: 1px solid #eceff1;
         padding: 60px 0;
@@ -918,11 +926,13 @@ section.we-offer, section.partner-three {
     text-align: center;
 
     h2 {
+        color: #211a23;
         margin-bottom: 100px;
     }
 
     h3 {
         color: $dark-violet;
+        color: #211a23;
         margin-bottom: 16px;
     }
 
@@ -1004,7 +1014,7 @@ section.we-offer, section.partner-three {
 
 section.empowering {
 
-    background: #fafafa;
+    background: $gray;
 
     .module-group {
         max-width: 1100px;
@@ -1153,7 +1163,7 @@ section.trial {
 
 .client-testimonial {
 
-    background: #fafafa;
+    background: $gray;
 
     .module-group {
         display: block;
@@ -1290,7 +1300,7 @@ section.features {
 
 section.pricing {
 
-    background: linear-gradient(180deg, #fff, #fafafa) !important;
+    background: linear-gradient(180deg, #fff, $gray) !important;
 
     h2 { text-align: center; }
 }

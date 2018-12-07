@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 210 138" style="enable-background:new 0 0 210 138;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#E31E24;}
+	.st2{font-family:'Poppins-Medium';}
+	.st3{font-size:37.4443px;}
+	.st4{fill:none;stroke:#E31E24;stroke-width:4;stroke-miterlimit:10;}
+	.st5{fill:#FFFFFF;stroke:#E31E24;stroke-width:4;stroke-miterlimit:10;}
+</style>
+<g id="XMLID_1_">
+	<path id="XMLID_39_" class="st0" d="M66,136c-2.2,0-4-1.8-4-4V6c0-2.2,1.8-4,4-4h88c2.2,0,4,1.8,4,4v126c0,2.2-1.8,4-4,4H66z"/>
+	<path id="XMLID_36_" class="st1" d="M154,4c1.1,0,2,0.9,2,2v126c0,1.1-0.9,2-2,2H66c-1.1,0-2-0.9-2-2V6c0-1.1,0.9-2,2-2H154 M154,0
+		H66c-3.3,0-6,2.7-6,6v126c0,3.3,2.7,6,6,6h88c3.3,0,6-2.7,6-6V6C160,2.7,157.3,0,154,0L154,0z"/>
+</g>
+<text id="XMLID_3_" transform="matrix(1 0 0 1 76 42)" class="st1 st2 st3">₹</text>
+<rect id="XMLID_4_" x="109" y="16" class="st1" width="34" height="6"/>
+<line id="XMLID_5_" class="st4" x1="109" y1="31" x2="133" y2="31"/>
+<line id="XMLID_7_" class="st4" x1="78" y1="62" x2="142" y2="62"/>
+<line id="XMLID_8_" class="st4" x1="108" y1="75" x2="142" y2="75"/>
+<line id="XMLID_9_" class="st4" x1="108" y1="88" x2="118" y2="88"/>
+<line id="XMLID_10_" class="st4" x1="127" y1="88" x2="142" y2="88"/>
+<g id="XMLID_6_">
+	<path id="XMLID_45_" class="st0" d="M72,136c-15.4,0-28-12.6-28-28s12.6-28,28-28s28,12.6,28,28S87.4,136,72,136z"/>
+	<g id="XMLID_41_">
+		<path id="XMLID_42_" class="st1" d="M72,82c14.3,0,26,11.7,26,26s-11.7,26-26,26s-26-11.7-26-26S57.7,82,72,82 M72,78
+			c-16.6,0-30,13.4-30,30s13.4,30,30,30s30-13.4,30-30S88.6,78,72,78L72,78z"/>
+	</g>
+</g>
+<polyline id="XMLID_12_" class="st5" points="60,107.7 68.2,116 84,100 "/>
+</svg>
