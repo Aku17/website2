@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     // biz slider
 
@@ -28,13 +28,13 @@ $(document).ready(function() {
 
     //$('#header-new').load("include/header.html");    
 
-    $('#header-new').load("include/header.html", function() {
+    $('#header-new').load("include/header.html", function () {
 
         path_class();
 
     });
 
-    $('#new-footer').load("include/footer.html", function() {
+    $('#new-footer').load("include/footer.html", function () {
 
         form_validation();
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
 
     // menu toggle
 
-    $(".mb-nav").click(function() {
+    $(".mb-nav").click(function () {
 
         $(".main-nav").toggle();
 
@@ -57,7 +57,7 @@ $(document).ready(function() {
 
     // swipe 1
 
-    $('.swipe-1 .nav-tabs li').click(function() {
+    $('.swipe-1 .nav-tabs li').click(function () {
 
         $(this).addClass('active').siblings().removeClass('active');
 
@@ -73,7 +73,7 @@ $(document).ready(function() {
 
     $(".swipe-1 .card").swipe({
 
-        swipeLeft: function(event, direction, distance, duration, fingerCount) {
+        swipeLeft: function (event, direction, distance, duration, fingerCount) {
 
             $(".swipe-1 .nav-tabs li.active").next('li').addClass("active");
 
@@ -91,7 +91,7 @@ $(document).ready(function() {
 
         },
 
-        swipeRight: function(event, direction, distance, duration, fingerCount) {
+        swipeRight: function (event, direction, distance, duration, fingerCount) {
 
             $(".swipe-1 .nav-tabs li.active").prev('li').addClass("active");
 
@@ -113,7 +113,7 @@ $(document).ready(function() {
 
     // swipe-2
 
-    $('.swipe-2 .nav-tabs li').click(function() {
+    $('.swipe-2 .nav-tabs li').click(function () {
 
         $(this).addClass('active').siblings().removeClass('active');
 
@@ -129,7 +129,7 @@ $(document).ready(function() {
 
     $(".swipe-2 .card").swipe({
 
-        swipeLeft: function(event, direction, distance, duration, fingerCount) {
+        swipeLeft: function (event, direction, distance, duration, fingerCount) {
 
             $(".swipe-2 .nav-tabs li.active").next('li').addClass("active");
 
@@ -147,7 +147,7 @@ $(document).ready(function() {
 
         },
 
-        swipeRight: function(event, direction, distance, duration, fingerCount) {
+        swipeRight: function (event, direction, distance, duration, fingerCount) {
 
             $(".swipe-2 .nav-tabs li.active").prev('li').addClass("active");
 
@@ -170,7 +170,7 @@ $(document).ready(function() {
 
     // pricing accordian mobile
 
-    $('.detail-view').click(function() {
+    $('.detail-view').click(function () {
 
         $(this).toggleClass('detail-active');
 
@@ -202,22 +202,23 @@ $(document).ready(function() {
 
 }); // document ready function
 
-  function clicked(){
+function clicked() {
      
         $.ajax({
             type: "POST",
             url: 'https://biz.dev.coniferlabs.in:4001/service/contactUs',
            
-              data: { 'name': $(".fullname").val(),
+        data: {
+            'name': $(".fullname").val(),
                       'email': $(".email").val(),
                       'message': $(".shortmsg").val()
                     },
 
-            success: function(res) {
+        success: function (res) {
                 $('.form-sec input[type="text"],texatrea').val('');
                 $('<div class="success">Your Details has been submitted successfully</div>').insertAfter('.shortmsg').delay(4000).fadeOut();
             },
-            error: function(error) {
+        error: function (error) {
                 $('<div class="form-error">Your Details could not be submitted</div>').insertAfter('.shortmsg').delay(4000).fadeOut();
             }
         })
@@ -239,12 +240,22 @@ function path_class() {
     // Add active class to target link
     target.addClass('active-menu');
 }
+function assign_class(value) {
+
+    console.log(value);
+        var target = $('nav a[href="#' + value + '"]');
+        // Add active class to target link
+        console.log(target);
+        target.addClass('active-menu');
+    
+}
+
 
 function form_validation() {
 
-    $(".submit-btn").on("click", function() {
+    $(".submit-btn").on("click", function () {
 
-        $('input').each(function() {
+        $('input').each(function () {
             if ($(this).attr('isrequired') == 'yes') {
                 var inputName = $(this).attr('class');
                 var inputVal = $(this).val();

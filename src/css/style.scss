@@ -12,7 +12,9 @@ $dark-violet: #132f7b;
 $red-theme: #E31E24;
 $black-theme: #000000;
 $white-theme: #FFFFFF;
-$gray:#fafafa;
+$grey:#fafafa;
+$form-grey: #818181;
+$text-theme: #211a23;
 /* -- variables en -- */
 
 /* == Mixins st == */
@@ -171,7 +173,7 @@ section {
 
 .light-btn {
 
-    background: $light-violet;
+    background: $red-theme;
     color: #fff;
     border-radius: 5px;
     display: table;
@@ -195,7 +197,7 @@ section {
 }
 
 .star-text {
-    color: $red-theme;
+    color: $white-theme;
 }
 
 
@@ -235,7 +237,6 @@ nav {
 
         margin: 0;
         padding: 0;
-
         @media screen and (max-width: 767px) {
             padding-top: 30px;
         }
@@ -260,7 +261,7 @@ nav {
 
             color: #000;
             font-weight: bold;
-            padding: 37px 0;
+            padding: 25px 0;
             display: block;
             font-size: 16px;
             text-transform: uppercase;
@@ -366,7 +367,7 @@ nav {
         background: #000;
         width: 100%;
         height: 100%;
-        opacity: 0.9;
+        opacity: 0.9;    
     }
 }
 
@@ -479,7 +480,7 @@ section.description {
 
     text-align: center;
     padding: 0 15px;
-    background: $gray;
+    background: $red-theme;
     .module-group {
         border-top: 1px solid #eceff1;
         padding: 60px 0;
@@ -492,7 +493,8 @@ section.description {
     p {
         max-width: 1060px;
         margin: auto;
-        color: #000;
+        color: $white-theme;
+        font-weight: bold;
     }
 
     @media screen and (max-width: 767px) {
@@ -553,12 +555,12 @@ section.description {
     /* -- col-10 -- */
     ul.nav-tabs {
 
-        max-width: 1000px;
-        margin: auto;
-
+        max-width: 1500px;
+        margin: 0;
+        border-bottom: none;
         li {
 
-            width: 33.33%;
+            width: 25%;
             box-sizing: border-box;
             text-align: center;
 
@@ -596,7 +598,7 @@ section.description {
     border: none;
     color: #666;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 20px;
 }
 
 .nav-tabs>li.active>a::after,
@@ -606,7 +608,7 @@ section.description {
 
 .nav-tabs>li>a::after {
     content: "";
-    background: #4285F4;
+    background: $red-theme;
     height: 3px;
     position: absolute;
     width: 100%;
@@ -638,6 +640,8 @@ section.description {
 
 .card {
     margin-bottom: 30px;
+    border: none !important;
+    background: $grey !important;
 }
 
 .nav>li>a {
@@ -775,6 +779,7 @@ section.swipe-1 {
 /* == swipe sec 2 == */
 
 .swipe-2 {
+    background: $grey;
 
     .col-md-10 {
         max-width: 1280px;
@@ -803,7 +808,7 @@ section.swipe-1 {
     }
 
     h3 {
-        color: $dark-violet;
+        color: $text-theme;
         display: block;
         font-size: 18px;
         font-weight: 700;
@@ -821,17 +826,10 @@ section.swipe-1 {
 
     .list-box {
 
-        width: 18%;
+        width: 25%;
         float: left;
         box-sizing: border-box;
         text-align: center;
-
-        @media screen and (min-width: 768px) {
-
-            &:nth-of-type(1), &:last-child {
-                width: 14%;
-            }
-        }
     }
 
     .brk-wrd h3 {
@@ -878,7 +876,7 @@ section.swipe-1 {
 
         .list-box {
 
-            width: 33.33%;
+            width: 25%;
             min-height: 120px;
 
             img {
@@ -926,14 +924,15 @@ section.we-offer, section.partner-three {
     text-align: center;
 
     h2 {
-        color: #211a23;
+        color: $text-theme;
         margin-bottom: 100px;
     }
 
     h3 {
         color: $dark-violet;
-        color: #211a23;
+        color: $text-theme;
         margin-bottom: 16px;
+        font-size: 20px;
     }
 
     img {
@@ -954,7 +953,7 @@ section.we-offer, section.partner-three {
         padding: 12px 35px;
     }
 
-    div.three-column:nth-of-type(1) {
+    div.three-column {
         margin-bottom: 70px;
     }
 
@@ -1014,7 +1013,7 @@ section.we-offer, section.partner-three {
 
 section.empowering {
 
-    background: $gray;
+    background: $grey;
 
     .module-group {
         max-width: 1100px;
@@ -1163,7 +1162,7 @@ section.trial {
 
 .client-testimonial {
 
-    background: $gray;
+    background: $grey;
 
     .module-group {
         display: block;
@@ -1300,7 +1299,7 @@ section.features {
 
 section.pricing {
 
-    background: linear-gradient(180deg, #fff, $gray) !important;
+    background: linear-gradient(180deg, #fff, $grey) !important;
 
     h2 { text-align: center; }
 }
@@ -1329,7 +1328,7 @@ table.t-price {
             width: 30%;
             text-align: left;
             padding-left: 30px;
-            border-bottom: 1px solid #87a6fc;
+            border-bottom: 1px solid $white-theme;
 
             @media screen and (max-width: 767px) {
                 padding-left: 10px;
@@ -1356,7 +1355,7 @@ table.t-price {
             &:nth-of-type(1) {
 
                 td {
-                    color: $light-violet;
+                    color: $red-theme;
                     font-weight: 500;
                     font-size: 32px;
                     padding-bottom: 0;
@@ -1400,10 +1399,10 @@ table.t-price {
 
                 &:nth-of-type(1) {
 
-                    background-color: $light-violet;
+                    background-color: $red-theme;
                     font-size: 22px;
                     color: #fff;
-                    background: $light-violet;
+                    background: $red-theme;
 
                     @media screen and (max-width: 767px) {
                         font-size: 14px;
@@ -1418,7 +1417,7 @@ table.t-price {
 
 .check {
 
-    background: url(../images/check.png) center no-repeat;
+    background: url(../images/check.svg) center no-repeat;
     height: 20px;
 }
 
@@ -1431,12 +1430,12 @@ table.t-price {
 .detail-view {
 
     font-family: 'Poppins', sans-serif;
-    border: 1px solid $light-violet;
+    border: 1px solid $red-theme;
     padding: 5px 20px;
     display: table;
     border-radius: 5px;
     margin: 20px auto 0;
-    color: $light-violet;
+    color: $red-theme;
 
     &:after {
 
@@ -1494,7 +1493,7 @@ table.t-price {
 .card-price {
 
     h2 {
-        color: #2a62ff;
+        color:$red-theme;
         font-weight: 500;
         font-size: 32px;
         padding-bottom: 0;
@@ -1678,15 +1677,15 @@ section.partner-three {
 
 footer {
 
-    background: #132f7b;
+    background: $white-theme;
 
     h3 {
         margin: 0 0 20px 0;
-        color: #fff;
+        color: $red-theme;
     }
 
     p {
-        color: #fff;
+        color: $red-theme;
         font-size: 16px;
         line-height: 24px;
     }
@@ -1733,9 +1732,9 @@ footer {
 
     .in-width {
 
-        max-width: 70%;
-        padding-left: 8%;
-
+        max-width: 100%;
+        // padding-left: 5%;
+        text-align: center;
         @media screen and (max-width: 950px) {
             max-width: 100%;
         }
@@ -1752,21 +1751,21 @@ footer {
     input,
     textarea {
 
-        border: 1px solid $light-violet;
+        border: 1px solid $black-theme;
         border-radius: 5px;
-        width: 100%;
-        background: transparent;
+        width: 70%;
+        background: white;
         box-sizing: border-box;
         box-shadow: none;
         padding: 10px 10px 10px 15px;
-        color: #fff;
+        // color: #fff;
         font-size: 13px;
         margin-bottom: 15px;
         font-family: 'Work Sans', sans-serif;
         letter-spacing: 0.5px;
 
         &::placeholder {
-            color: #fff;
+            color: $form-grey;
         }
 
         &:focus {
@@ -1787,9 +1786,11 @@ footer {
     }
 
     a {
-        width: 100%;
+        width: 20%;
         text-align: center;
         color: #fff;
+        // float: right;
+        margin-left: 65%;
     }
 }
 
@@ -1809,10 +1810,10 @@ footer {
     p {
         display: table;
         width: 100%;
-        color: $light-violet;
+        color: $red-theme;
         font-weight: 500;
         margin-bottom: 0;
-
+        text-align: center;
         @media screen and (max-width: 767px) {
             margin-top: 30px;
             text-align: center;
@@ -1842,3 +1843,117 @@ footer {
 }
 
 
+.carousel-item {
+    height: 50vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }  
+
+.jimit-nav {
+    background: white;
+    border-bottom: solid 1px lightgray;
+}
+
+.contact-us {
+    height: 200px;
+    background: $red-theme;
+    i {
+        color: $white-theme;
+    }
+    p {
+        color: $white-theme;
+        a {
+            color: $white-theme;
+        }
+    }
+}
+
+
+#mainNav {
+    border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+    background-color: #fff;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  #mainNav .navbar-brand {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #F05F40;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: #f05f40;
+  }
+  
+  #mainNav .navbar-nav > li.nav-item > a.nav-link,
+  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+    font-size: .9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #212529;
+  }
+  
+  #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+    color: #F05F40;
+  }
+  
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
+  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
+    color: #F05F40 !important;
+    background-color: transparent;
+  }
+  
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
+  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
+    background-color: transparent;
+  }
+  
+  @media (min-width: 992px) {
+    // #mainNav {
+    //   border-color: transparent;
+    //   background-color: transparent;
+    // }
+    #mainNav .navbar-brand {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+      color: #fff;
+    }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link {
+      padding: 0.5rem 1rem;
+    }
+    // #mainNav .navbar-nav > li.nav-item > a.nav-link,
+    // #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+    //   color: rgba(255, 255, 255, 0.7);
+    // }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+    #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+      color: $red-theme;;
+    }
+    #mainNav.navbar-shrink {
+      border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+      background-color: #fff;
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+      color: #F05F40;
+    }
+    #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
+      color: #f05f40;
+    }
+    #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
+    #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
+      color: #212529;
+    }
+    #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
+    #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+      color: #F05F40;
+    }
+  }
