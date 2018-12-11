@@ -178,27 +178,6 @@ $(document).ready(function () {
 
     });
 
-    // $('.form-sec a').click(function() {
-    //   console.log('button clicked')
-    //     $.ajax({
-    //         type: "POST",
-    //         url: 'https://biz.dev.coniferlabs.in:4001/service/contactUs',
-    //         // headers: {
-    //         //     "x-access-token": token,
-    //         // },
-    //           data: { 'name': 'nikhil',
-    //                   'email': 'nikhils9it@gmail.com',
-    //                   'message': 'Testing'
-    //                 },
-    //         success: function(res) {
-    //             console.log(res)
-    //         },
-    //         error: function(error) {
-    //             console.log(error)
-    //         }
-    //     });
-
-    // });
 
 }); // document ready function
 
@@ -240,6 +219,7 @@ function path_class() {
     // Add active class to target link
     target.addClass('active-menu');
 }
+
 function assign_class(value) {
 
     console.log(value);
