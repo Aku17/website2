@@ -217,7 +217,7 @@ function path_class() {
 
     var target = $('nav a[href="' + path + '"]');
     // Add active class to target link
-    target.addClass('active-menu');
+    target.addClass('active');
 }
 
 function assign_class(value) {

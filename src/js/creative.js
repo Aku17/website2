@@ -15,62 +15,6 @@
     }
   });
 
-   // swipe-2
-
-   $('.swipe-2 .nav-tabs li').click(function() {
-
-    $(this).addClass('active').siblings().removeClass('active');
-
-    var attr = $(this).children('a').attr("data-roles");
-
-    // var newAttr = attr.replace("#", "");
-
-    $(".swipe-2 .tab-content .tab-pane").removeClass("active");
-
-    $(".swipe-2 .tab-content").find('#' + attr).addClass("active");
-
-});
-
-$(".swipe-2 .card").swipe({
-
-    swipeLeft: function(event, direction, distance, duration, fingerCount) {
-
-        $(".swipe-2 .nav-tabs li.active").next('li').addClass("active");
-
-        $(".swipe-2 .nav-tabs li.active").prev('li').removeClass("active");
-
-        var newText = $('.swipe-2 .nav-tabs li.active');
-
-        var attr = newText.children('a').attr("data-roles");
-
-        // var newAttr = attr.replace("#", "");
-
-        $(".swipe-2 .tab-content .tab-pane").removeClass("active");
-
-        $(".swipe-2 .tab-content").find('#' + attr).addClass("active");
-
-    },
-
-    swipeRight: function(event, direction, distance, duration, fingerCount) {
-
-        $(".swipe-2 .nav-tabs li.active").prev('li').addClass("active");
-
-        $(".swipe-2 .nav-tabs li.active").next('li').removeClass("active");
-
-        var newText = $('.swipe-2 .nav-tabs li.active');
-
-        var attr = newText.children('a').attr("data-roles");
-
-        // var newAttr = attr.replace("#", "");
-
-        $(".swipe-2 .tab-content .tab-pane").removeClass("active");
-
-        $(".swipe-2 .tab-content").find('#' + attr).addClass("active");
-
-    }
-
-});
-
 
   // Closes responsive menu when a scroll trigger link is clicked
   $('.js-scroll-trigger').click(function() {
@@ -78,10 +22,10 @@ $(".swipe-2 .card").swipe({
   });
 
   // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#mainNav',
-    offset: 57
-  });
+  // $('body').scrollspy({
+  //   target: '#mainNav',
+  //   offset: 57
+  // });
 
   // Collapse Navbar
   var navbarCollapse = function() {
