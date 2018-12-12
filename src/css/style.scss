@@ -1922,10 +1922,16 @@ footer {
         text-align: center;
         color: #fff;
         // float: right;
-        // margin-left: 65%;
-        // @media screen and (max-width: 767px) {
-        //     margin-left: 55%;
-        // }
+        margin-left: 65%;
+        @media screen and (max-width: 565px) {
+            margin-left: 55%;
+        }
+        @media screen and (min-width: 450px) and (max-width: 565px) {
+            margin-left: 35%;
+        }
+        @media screen and (max-width: 450px) {
+            margin-left: 35%;
+        }
     }
 }
 
