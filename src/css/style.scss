@@ -464,7 +464,7 @@ section.banner {
 
     a.light-btn {
         @media screen and (max-width: 500px) {
-            width: 75%;
+            width: 122px;
             font-size: 12px;
         }
 
@@ -489,6 +489,7 @@ section.banner {
         .text-sec {
             position: absolute;
             padding-bottom: 76px;
+            width: 110px;
         }
 
         .img-sec img {
