@@ -1867,7 +1867,6 @@ footer {
         max-width: 100%;
         // padding-left: 5%;
         text-align: center;
-
         @media screen and (max-width: 950px) {
             max-width: 100%;
         }
@@ -1923,7 +1922,10 @@ footer {
         text-align: center;
         color: #fff;
         // float: right;
-        margin-left: 65%;
+        // margin-left: 65%;
+        // @media screen and (max-width: 767px) {
+        //     margin-left: 55%;
+        // }
     }
 }
 
@@ -1979,7 +1981,7 @@ footer {
 
 
 .carousel-item {
-    height: 50vh;
+    height: 57vh;
     min-height: 300px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
