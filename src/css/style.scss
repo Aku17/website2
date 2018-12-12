@@ -464,7 +464,7 @@ section.banner {
 
     a.light-btn {
         @media screen and (max-width: 500px) {
-            width: 71%;
+            width: 75%;
             font-size: 12px;
         }
 
@@ -972,6 +972,7 @@ section.partner-three {
         @media screen and (max-width: 842px) {
             font-size: 16px;
             margin-bottom: 0;
+            line-height: 18px;
         }
 
         // @media screen and (min-width: 768px) and (max-width: 950px) {
@@ -1010,6 +1011,7 @@ section.partner-three {
 
         @media screen and (max-width: 842px) {
             font-size: 12px;
+            line-height: 18px;
         }
     }
 
