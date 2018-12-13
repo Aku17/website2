@@ -182,26 +182,26 @@ $(document).ready(function () {
 }); // document ready function
 
 function clicked() {
-     
-        $.ajax({
-            type: "POST",
-            url: 'https://app.targetpos.in:4001/service/contactUs',
-           
+
+    $.ajax({
+        type: "POST",
+        url: 'https://app.targetpos.in:4001/service/contactUs',
+
         data: {
             'name': $(".fullname").val(),
-                      'email': $(".email").val(),
-                      'message': $(".shortmsg").val()
-                    },
+            'email': $(".email").val(),
+            'message': $(".shortmsg").val()
+        },
 
         success: function (res) {
-                $('.form-sec input[type="text"],texatrea').val('');
-                $('<div class="success">Your Details has been submitted successfully</div>').insertAfter('.shortmsg').delay(4000).fadeOut();
-            },
+            $('.form-sec input[type="text"],texatrea').val('');
+            $('<div class="success">Your Details has been submitted successfully</div>').insertAfter('.shortmsg').delay(4000).fadeOut();
+        },
         error: function (error) {
-                $('<div class="form-error">Your Details could not be submitted</div>').insertAfter('.shortmsg').delay(4000).fadeOut();
-            }
-        })
-      };
+            $('<div class="form-error">Your Details could not be submitted</div>').insertAfter('.shortmsg').delay(4000).fadeOut();
+        }
+    })
+};
 
 
 // functions
@@ -214,20 +214,20 @@ function path_class() {
     if (path == '') {
         path = 'index.php';
     }
+    if (path === 'partners.html') {
+        changes_url();
+    }
 
     var target = $('nav a[href="' + path + '"]');
     // Add active class to target link
     target.addClass('active');
 }
 
-function assign_class(value) {
-
-    console.log(value);
-        var target = $('nav a[href="#' + value + '"]');
-        // Add active class to target link
-        console.log(target);
-        target.addClass('active-menu');
-    
+function changes_url() {
+    var target1 = $('nav a[href="#features"]');
+    var target2 = $('nav a[href="#variants"]');
+    target1.attr("href", 'index.html#features');
+    target2.attr("href", 'index.html#variants');
 }
 
 
