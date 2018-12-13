@@ -226,8 +226,10 @@ function path_class() {
 function changes_url() {
     var target1 = $('nav a[href="#features"]');
     var target2 = $('nav a[href="#variants"]');
+    var target2 = $('nav a[href="#contactUs"]');
     target1.attr("href", 'index.html#features');
     target2.attr("href", 'index.html#variants');
+    target2.attr("href", 'index.html#contactUs');
 }
 
 
