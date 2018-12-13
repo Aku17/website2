@@ -185,7 +185,7 @@ function clicked() {
      
         $.ajax({
             type: "POST",
-            url: 'https://biz.dev.coniferlabs.in:4001/service/contactUs',
+            url: 'https://app.targetpos.in:4001/service/contactUs',
            
         data: {
             'name': $(".fullname").val(),
